@@ -15,6 +15,7 @@ import remarkGithubAdmonitionsToDirectives, {
   GithubAlertType,
 } from "remark-github-admonitions-to-directives";
 import remarkMath from "remark-math";
+import remarkEmoji from "remark-emoji";
 import remarkSectionize from "remark-sectionize";
 import { AdmonitionComponent } from "./src/plugins/rehype-component-admonition.mjs";
 import { GithubCardComponent } from "./src/plugins/rehype-component-github-card.mjs";
@@ -83,6 +84,7 @@ export default defineConfig({
       remarkDirective,
       remarkSectionize,
       parseDirectiveNode,
+      remarkEmoji,
     ],
     rehypePlugins: [
       rehypeKatex,
