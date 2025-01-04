@@ -20,6 +20,7 @@ import remarkBreaks from "remark-breaks";
 import remarkSectionize from "remark-sectionize";
 import { AdmonitionComponent } from "./src/plugins/rehype-component-admonition.mjs";
 import { GithubCardComponent } from "./src/plugins/rehype-component-github-card.mjs";
+import { remarkCodeblockSharp } from "./src/plugins/remark-codeblock-sharp.js";
 import { parseDirectiveNode } from "./src/plugins/remark-directive-rehype.js";
 import { remarkExcerpt } from "./src/plugins/remark-excerpt.js";
 import { remarkReadingTime } from "./src/plugins/remark-reading-time.mjs";
@@ -82,6 +83,7 @@ export default defineConfig({
           }
         }
       ],
+      remarkCodeblockSharp,
       remarkDirective,
       remarkSectionize,
       parseDirectiveNode,
